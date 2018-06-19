@@ -150,7 +150,6 @@ if __name__ == "__main__":
         # Load images from command prompt
         im1 = Image.open('image1.jpg')
         im2 = Image.open('image2.jpg')
-        plot_image(im2)
     except IndexError:
         print('Usage: python ransac.py image')
         sys.exit()
@@ -163,7 +162,6 @@ if __name__ == "__main__":
     key1 = read_features_from_file('temp/1.key')
     key2 = read_features_from_file('temp/2.key')
     score = match(key1[1], key2[1])
-    print(score)
     plist = get_points(key1[0], key2[0], score)
     plot_matches(im1,im2,key1[0],key2[0],score)
     

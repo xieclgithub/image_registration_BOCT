@@ -67,7 +67,7 @@ def match(desc1,desc2):
         input: desc1 (matrix with descriptors for first image),
         desc2 (same for second image)"""
 
-    dist_ratio = 0.75
+    dist_ratio = 0.6
     desc1_size = desc1.shape
 
     matchscores = zeros((desc1_size[0],1))
